@@ -2,10 +2,21 @@
 <html>
 
 <body>
-<form name = "seatBooking action = "booking.html">
+<form name="seatBooking" action="./booking.html" onsubmit="return frmValidation()">
 
-Row Number [1-9]: <input type="text" name="number">
+Row Number [1-9]: <input type="text" name="number" id="num1">
+Seat Letter [A-F]: <input type="text" name="letter">
+<input type="submit" value="Submit">
+</form>
+<p id="errorMsg" style="color:red"></p>
 
+<script>
+    function frmValidation() {
+        myElement=document.getElementById("errorMsg")
+        myElement.innerHTML="Error"
+        myElement=document.getElement
+        return false;
+    }
+</script>
 
-</form>"
 </body>
