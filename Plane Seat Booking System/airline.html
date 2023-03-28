@@ -4,7 +4,7 @@
 <body>
 <form name="seatBooking" action="./booking.html" onsubmit="return frmValidation()">
 
-Row Number [1-9]: <input type="text" name="number" id="num1">
+Row Number [1-9]: <input type="text" name="number" id="numInput">
 Seat Letter [A-F]: <input type="text" name="letter">
 <input type="submit" value="Submit">
 </form>
@@ -14,12 +14,13 @@ Seat Letter [A-F]: <input type="text" name="letter">
     function frmValidation() {
         num = document.forms["seatBooking"]["number"].value;
         if (num < 1 || num > 9) {
-            myElement=document.getElementById("errorMsg")
-            myElement.innerHTML="Error"
-            myElement=document.getElementById("numInput")
+            myElement=document.getElementById("errorMsg");
+            myElement.innerHTML="Error";
+            myElement=document.getElementById("numInput");
             myElement.style="border-color:red;";
             return false;
         }
+        return true;
     }
 </script>
 
