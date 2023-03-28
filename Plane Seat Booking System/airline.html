@@ -12,10 +12,14 @@ Seat Letter [A-F]: <input type="text" name="letter">
 
 <script>
     function frmValidation() {
-        myElement=document.getElementById("errorMsg")
-        myElement.innerHTML="Error"
-        myElement=document.getElement
-        return false;
+        num = document.forms["seatBooking"]["number"].value;
+        if (num < 1 || num > 9) {
+            myElement=document.getElementById("errorMsg")
+            myElement.innerHTML="Error"
+            myElement=document.getElementById("numInput")
+            myElement.style="border-color:red;";
+            return false;
+        }
     }
 </script>
 
