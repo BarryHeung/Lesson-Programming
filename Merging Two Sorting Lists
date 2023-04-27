@@ -1,0 +1,42 @@
+# 27.4.2023 Lesson
+
+
+
+# Method 1 (from https://www.geeksforgeeks.org/python-combining-two-sorted-lists/):
+
+test_list1 = [1, 5, 6, 9, 11]
+test_list2 = [3, 4, 7, 8, 10]
+import numpy as np
+
+# Convert the lists to numpy arrays
+array1 = np.array(test_list1)
+array2 = np.array(test_list2)
+
+# Use the concatenate function to combine the arrays
+combined_array = np.concatenate((array1, array2))
+
+# Sort the combined array
+sorted_combined_array = np.sort(combined_array)
+
+# Convert the sorted array back to a list
+res = sorted_combined_array.tolist()
+
+# Print the result
+print("The combined sorted list is : " + str(res))
+
+
+
+# Method 2 (from https://i0.wp.com/www.datasciencelearner.com/wp-content/uploads/2021/08/Merging-two-sorted-list-using-stack.jpg?ssl=1):
+
+list1 = [1, 5, 6, 9, 11]
+list2 = [3, 4, 7, 8, 10]
+# Using stack
+sorted_list = []
+while list1 and list2:
+    if list1[0] < list2[0] then
+        sorted_list.append(list1.pop(0))
+    else
+        sorted_list.append(list2.pop(0))
+sorted_list += list1
+sorted_list += list2
+print(sorted_list)
